@@ -26,7 +26,7 @@ I choose the **CSRT (Discriminative Correlation Filter with Channel and Spatial 
 
 
 ---
-## 📍 **Usage Flow**:
+##  **Usage Flow**:
 
 - The camera view will open.
 - Press (S ) to pause and enable ROI selection.
@@ -35,9 +35,14 @@ I choose the **CSRT (Discriminative Correlation Filter with Channel and Spatial 
 -- Press (C) to Cancel ROI selection.
 - Press (Esc) any time to Quit
 
+##  **requirement**
+opencv-contrib-python==4.9.0.80
 
 
-## 🎥 **Demo Video**
+
+
+
+##  **Demo Video**
 
 Watch the tracker in action
 Watch the demo :[]

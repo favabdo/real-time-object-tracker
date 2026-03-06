@@ -19,17 +19,18 @@ def object_tracking():
          ret,frame =video_cap.read()
          if not ret: 
             break
+         frame = cv2.flip(frame,1)
          
          if is_tracking:
             success ,bounding_box=tracker.update(frame)
             if success:
                 frame=drawing_box(bounding_box,frame)
-                cv2.putText(frame , "Tracking....(press R to reselect object or 'Esc' to Quit " 
+                cv2.putText(frame , "Tracking....(press R to reselect object or 'Esc' to Quit) " 
                     ,(20,40), cv2.FONT_ITALIC,.6,(255,255,0),2)
                     
             else:
-                cv2.putText(frame , "Tracking Lost (press R to reselect object " 
-                    ,(40,40), cv2.FONT_ITALIC,.8,(0,255,0),2)
+                cv2.putText(frame , "Tracking Lost (press R to reselect object) " 
+                    ,(40,40), cv2.FONT_ITALIC,.8,(0,0,255),2)
          else :
                 cv2.putText(frame , "press S to select object or 'Esc' to Quit " 
                         ,(20,40), cv2.FONT_ITALIC,.6,(50,255,100),2)
