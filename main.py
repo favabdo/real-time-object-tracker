@@ -28,12 +28,14 @@ def object_tracking():
                     ,(20,40), cv2.FONT_ITALIC,.6,(255,255,0),2)
                     
             else:
-                cv2.putText(frame , "Tracking Lost (press R to reselect object )" 
+                cv2.putText(frame , "Tracking Lost (press R to reselect object " 
                     ,(40,40), cv2.FONT_ITALIC,.8,(0,255,0),2)
          else :
-                cv2.putText(frame , "press S to select object or 'Esc' to Quit )" 
-                        ,(20,40), cv2.FONT_ITALIC,.6,(0,255,0),2)
-
+                cv2.putText(frame , "press S to select object or 'Esc' to Quit " 
+                        ,(20,40), cv2.FONT_ITALIC,.6,(50,255,100),2)
+                
+         cv2.putText(frame , "CREATED BY ABDULLAH ELSAWY " 
+                        ,(180,450), cv2.FONT_ITALIC,.6,(100,255,255),2)
          cv2.imshow("real-time tracker", frame)
          key = cv2.waitKey(1) & 0xff
 
